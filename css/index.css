@@ -2,7 +2,7 @@
 * @Author: YAN7
 * @Date:   2016-07-03 09:32:08
 * @Last Modified by:   YAN7
-* @Last Modified time: 2016-07-03 11:46:45
+* @Last Modified time: 2016-07-03 13:25:51
 */
 @CHARSET "UTF-8";
 html{margin:0; padding:0; border:0; }
@@ -25,21 +25,34 @@ h1,h2,h3,h4{font-size:12px; font-weight:bold; }
 hr {border: 0; border-top:1px solid #ccc; height:0; }
 /* -----------------------------华丽的分割线---------------------------------- */
 
-/* li:margin-left: 15px; */
-	/* li:margin-top: 20px; */
+
 ul {width: 1230px; height: 480px; border: 1px solid #000; margin: 50px auto; }
-ul li {float: left; margin: 10px; position: relative; overflow: hidden;  cursor:pointer;}
-ul li img {border: 5px solid #ccc;}
-ul li div {background-color: lightgreen; position: absolute; z-index: 10; }
+ul li {float: left; margin: 10px; position: relative; overflow: hidden;  cursor:pointer; transition: all .3s ease-in;}
+ul li img {border: 5px solid #ccc; opacity:.7;}
+ul li div {background-color: lightgreen; position: absolute; z-index: 10; transition: all .3s ease-in;}
 .top, .bottom{width: 380px; height: 5px; }
 .top { width: 390px;}
-.top {left: -390px;}
+.top {left: -390px; }
 .bottom {top: 215px; left: 5px;}
 .bottom {left: 390px;}
 .left, .right {width: 5px; height: 215px;}
-.left{left: 0; top: -5px;}
+.left{left: 0;}
 .left{top: -215px;}
 .right {left: 385px; top: 5px;}
 .right {top: 220px;}
 p {position: absolute; width: 385px; height: 30px; background-color: cyan; text-align: center; font: 15px/30px 'simsun'; top: 185px; }
-p {top: 220px;}
+p {top: 220px; transition: all .3s ease-in;}
+
+/* ================ 动画 c3属性================= */
+li:hover .top{left: 0px;}
+li:hover .bottom{left: 5px;}
+li:hover .left{top: 5px;}
+li:hover .right{top: 5px;}
+li:hover p{top: 185px;}
+li:hover img{opacity:1;}
+
+li:hover {box-shadow: 5px 5px #ddd;}
+
+/* animations {
+0: translate
+} */
