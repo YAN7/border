@@ -2,7 +2,7 @@
 * @Author: YAN7
 * @Date:   2016-07-03 09:32:08
 * @Last Modified by:   YAN7
-* @Last Modified time: 2016-07-03 20:53:08
+* @Last Modified time: 2016-07-03 21:54:59
 */
 @CHARSET "UTF-8";
 html{margin:0; padding:0; border:0; }
@@ -20,7 +20,7 @@ table{border-collapse:collapse; border-spacing:0; }
 table, th, td {vertical-align: middle; }
 .clearfix:after{content: "."; display: block; height: 0; clear: both; overflow: hidden; visibility: hidden; }
 .clearfix{zoom:1 }
-.clearboth{height:0px; line-height:0px; overflow:hidden; clear:both; font-size:0px; }
+.clearboth {height:0px; line-height:0px; overflow:hidden; clear:both; font-size:0px; }
 h1,h2,h3,h4{font-size:12px; font-weight:bold; }
 hr {border: 0; border-top:1px solid #ccc; height:0; }
 /* -----------------------------华丽的分割线---------------------------------- */
@@ -28,7 +28,7 @@ hr {border: 0; border-top:1px solid #ccc; height:0; }
 
 ul {width: 1230px; height: 480px; border: 1px solid #000; margin: 50px auto; }
 ul li {float: left; margin: 10px; position: relative; overflow: hidden;  cursor:pointer; transition: all .3s ease-in;}
-ul li img {border: 5px solid #ccc; opacity:.7;}
+ul li img {border: 5px solid #ccc;}
 ul li div {background-color: lightgreen; position: absolute; z-index: 10; transition: all .3s ease-in;}
 ul li .top, .bottom{width: 380px; height: 5px;}
 ul li .top { width: 390px; left: -390px;}
@@ -47,7 +47,7 @@ li:hover p{top: 185px;}
 li:hover img{opacity:1;}
 li:hover {box-shadow: 5px 5px #ddd;} */
 
-/* ================ 动画 c3-transition属性================= */
+/* ================ 动画 c3-@keyframes动画以及transition属性================= */
 
 @keyframes moveTop {form {left: -390px;} to {left: 0px;} }
 @keyframes moveBottom {from {left: 390px;} to {left: 5px;} }
@@ -55,8 +55,9 @@ li:hover {box-shadow: 5px 5px #ddd;} */
 @keyframes moveRight {from {top: 220px;} to {top: 5px;} }
 @keyframes moveText {from {top: 220px;} to {top: 185px;} }
 
-li:hover .top{animation: moveTop 0.4s forwards;}
-li:hover .bottom{animation: moveBottom 0.4s forwards;}
-li:hover .left{animation: moveLeft 0.4s forwards;}
-li:hover .right{animation: moveRight 0.4s forwards;}
-li:hover p{animation: moveText 0.4s forwards;}
+li:hover .top{animation: moveTop 0.5s ease-in forwards; }
+li:hover .bottom{animation: moveBottom 0.5s ease-in forwards;}
+li:hover .left{animation: moveLeft 0.5s ease-in forwards;}
+li:hover .right{animation: moveRight 0.5s ease-in forwards;}
+li:hover p{animation: moveText 0.5s ease-in forwards;}
+li:hover img {transition:all .4s ease-in; transform: scale(1.1, 1.1); } /* 使图片以动画的形式缩放 */
